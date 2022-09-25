@@ -1,0 +1,15 @@
+{
+  "backups": {
+    "pdf": {
+      "origin": "/test/",
+      "destination": "/test/backup",
+      "keep": 5,
+      "schedule": "0 0 * * *",
+      "include_filters": [
+        {
+          "type": "regex",
+        }
+      ]
+    }
+  }
+}
