@@ -1,8 +1,18 @@
-from typing import List, TypedDict
+from typing import Any, Dict, List, TypedDict
+
+
+class BackupFilter(TypedDict):
+    name: str
+    type: str
+    description: str
+    params: Dict[str, Any]
 
 
 class BackupConfig(TypedDict):
-    origin_path: str
-    destination_path: str
-    ignore_patterns: List[str]
-    include_patterns: List[str]
+    type: str
+    origin: str
+    destination: str
+    schedule: str
+    include_filters: List[BackupFilter]
+    exclude_filters: List[BackupFilter]
+    config: Dict[str, Any]

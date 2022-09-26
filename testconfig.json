@@ -1,6 +1,19 @@
 {
+  "global": {
+    "exclude_filters": [
+      {
+        "type": "file_regex",
+        "name": "node_modules",
+        "description": "filter to exclude node_modules of being in the backup",
+        "params": {
+          "regex": ".*node_modules"
+        }
+      }
+    ]
+  },
   "backups": {
     "pdf": {
+      "type": "file_copy",
       "origin": "/test/",
       "destination": "/test/backup",
       "keep": 5,
@@ -8,8 +21,10 @@
       "include_filters": [
         {
           "type": "regex",
+          "params": {}
         }
-      ]
+      ],
+      "config": {}
     }
   }
 }

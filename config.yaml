@@ -1,0 +1,6 @@
+global:
+  ignore_filters:
+    node_modules:
+      type: "folder_filter"
+      params: 
+        regex: 
